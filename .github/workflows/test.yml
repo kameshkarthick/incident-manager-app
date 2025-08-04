@@ -14,6 +14,20 @@ jobs:
       matrix:
         node-version: [18.x]
 
+    env:
+      DB_HOST: ${{ secrets.DB_HOST }}
+      DB_USER: ${{ secrets.DB_USER }}
+      DB_PASS: ${{ secrets.DB_PASS }}
+      DB_NAME: ${{ secrets.DB_NAME }}
+      FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+      FIREBASE_CLIENT_EMAIL: ${{ secrets.FIREBASE_CLIENT_EMAIL }}
+      FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      TEST_FIREBASE_API_KEY: ${{ secrets.TEST_FIREBASE_API_KEY }}
+      TEST_FIREBASE_EMAIL: ${{ secrets.TEST_FIREBASE_EMAIL }}
+      TEST_FIREBASE_PASSWORD: ${{ secrets.TEST_FIREBASE_PASSWORD }}
+      TEST_FIREBASE_UID: ${{ secrets.TEST_FIREBASE_UID }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

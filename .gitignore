@@ -1,0 +1,16 @@
+# root
+.env
+node_modules/
+dist/
+.next/
+.DS_Store
+
+# backend
+/backend/.env
+/backend/node_modules
+
+# frontend
+/frontend/.env.local
+/frontend/node_modules
+
+package-lock.json
